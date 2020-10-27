@@ -1,8 +1,22 @@
+import React, {Fragment} from 'react'
+import ChatRoom from './components/ChatRoom'
+import {connect} from 'react-redux'
+import Header from "./components/Header";
 
-function App() {
-  return (
-    <h1>super</h1>
-  );
+const App = ({ auth }) => {
+    const isIn = auth.isAuthenticated;
+    return (
+        <Fragment>
+            <Header isIn={isIn}/>
+            <ChatRoom />
+        </Fragment>
+    );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+    return {
+        auth: state.auth,
+    };
+}
+
+export default connect(mapStateToProps)(App);
