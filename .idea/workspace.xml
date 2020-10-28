@@ -12,11 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5cccbae6-9974-42b9-bfd5-edb1cbb45c45" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ChatMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatMessage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/NewMessageForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewMessageForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/chatActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/chatActions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603790343870</updated>
       <workItem from="1603790346061" duration="26737000" />
-      <workItem from="1603877160746" duration="19939000" />
+      <workItem from="1603877160746" duration="20574000" />
     </task>
     <servers />
   </component>

@@ -31,7 +31,7 @@ const ChatMessage = ({ content, photoUrl, status }) => {
     return (
         <Container status={status}>
             <MessageBalloon>
-                <img src={content} alt={content}/>
+                {content}
             </MessageBalloon>
             <Avatar src={photoUrl} alt={'photo'}/>
         </Container>

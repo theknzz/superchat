@@ -65,12 +65,6 @@ const NewMessageFrom = ({ send, isIn, marker }) => {
         sendMessage()
     }
 
-    const handleImage = e => {
-        const url = URL.createObjectURL(e.target.files[0]);
-        send(url)
-        marker.current.scrollIntoView({ behavior: 'smooth'});
-    }
-
     return (
         <>
             <Form onSubmit={handleSubmit} disabled={!isIn}>
@@ -83,7 +77,6 @@ const NewMessageFrom = ({ send, isIn, marker }) => {
                     value={input}
                     disabled={!isIn}
                 />
-                <input type={'file'} accept="image/png, image/jpeg" onChange={handleImage} name={'file'} />
                 <Button disabled={!input}>➡</Button>
             </Form>
         </>
