@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import {signIn, signOut} from '../store/actions/authActions'
 import styled from '@emotion/styled'
@@ -10,16 +10,18 @@ const Links = styled.div`
 const Button = styled.button`
     background-color: #2a2f32;
     color: lightgrey;
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 15px;
     border: none;
 `
 
-const SignIn = (props) => {
+const Auth = ( props ) => {
+    const display = props.isIn ?
+        <Button onClick={() => props.signOut()}>Sign Out</Button> :
+        <Button onClick={() => props.signIn()}>Sign In</Button>;
     return (
         <Links>
-            <Button onClick={() => props.signIn()}>In</Button>
-            <Button onClick={() => props.signOut()}>Out</Button>
+            {display}
         </Links>
     );
 }
@@ -27,14 +29,15 @@ const SignIn = (props) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         signIn: () => dispatch(signIn()),
-        signOut: () => dispatch(signOut())
+        signOut: () => dispatch(signOut()),
     }
 }
 
 const mapStateToProps = (state) => {
     return {
         message: state.auth.authError,
+        isIn: state.auth.isAuthenticated,
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignIn)
+export default connect(mapStateToProps, mapDispatchToProps)(Auth)

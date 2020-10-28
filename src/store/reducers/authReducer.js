@@ -29,6 +29,15 @@ const authReducer = ( state = initialState, action) => {
                 authError: 'Logout failed',
                 isAuthenticated: true,
             };
+        case 'UPDATE': {
+            if (action.content!==null) {
+                return {
+                    authError: null,
+                    isAuthenticated: true,
+                }
+            }
+            return state;
+        }
         default:
             return state;
     }

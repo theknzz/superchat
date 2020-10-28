@@ -28,3 +28,9 @@ export const signOut = () => {
         });
     }
 }
+
+export const update = (user) => {
+    return ( dispatch, getState, { getFirebase }) => {
+        dispatch({type: 'UPDATE', content: user})
+    }
+}

@@ -4,7 +4,6 @@ import {connect} from 'react-redux'
 import {useFirebase} from "react-redux-firebase";
 import styled from "@emotion/styled";
 
-
 const Form = styled.form`
     display: flex;
     height: 10vh;
@@ -28,6 +27,9 @@ const Input = styled.input`
     &: focus {
         outline: none;
     }
+    &: disabled {
+        cursor: not-allowed;
+    }
 `
 
 const Button = styled.button`
@@ -39,13 +41,13 @@ const Button = styled.button`
     &: disabled {
         opacity: 0.2;
         color: lightgrey;
+        cursor: not-allowed;
     }
 `
 
-const NewMessageFrom = ({ send }) => {
+const NewMessageFrom = ({ send, isIn, marker }) => {
 
     const [input, setInput] = useState('');
-
     const auth = useFirebase().auth();
 
     const handleSubmit = e => {
@@ -53,24 +55,30 @@ const NewMessageFrom = ({ send }) => {
         if (auth.currentUser) {
             send(input);
             setInput('');
+            marker.current.scrollIntoView({ behavior: 'smooth'});
         }
     }
 
-
     return (
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} disabled={!isIn}>
             <Input
                 type="text"
                 onChange={(e) => {
                     setInput(e.target.value)
                 }}
                 value={input}
+                disabled={!isIn}
             />
             <Button disabled={!input}>➡</Button>
         </Form>
     );
 }
 
+const mapStateToProps = (state) => {
+    return {
+        isIn: state.auth.isAuthenticated,
+    };
+}
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -78,4 +86,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(NewMessageFrom)
+export default connect(mapStateToProps, mapDispatchToProps)(NewMessageFrom)

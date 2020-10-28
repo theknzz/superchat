@@ -10,7 +10,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cccbae6-9974-42b9-bfd5-edb1cbb45c45" name="Default Changelist" comment="" />
+    <list default="true" id="5cccbae6-9974-42b9-bfd5-edb1cbb45c45" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChatMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatMessage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChatRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatRoom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewMessageForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewMessageForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/authActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/authActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/authReducer.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603790343870</updated>
       <workItem from="1603790346061" duration="26737000" />
+      <workItem from="1603877160746" duration="14561000" />
     </task>
     <servers />
   </component>
@@ -67,6 +79,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="647" y="345" width="616" height="423" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603816563959">

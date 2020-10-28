@@ -27,7 +27,7 @@ const MessageBalloon = styled.div`
     align-self: center;
 `
 
-const ChatMessage = ({ content, photoUrl, status}) => {
+const ChatMessage = ({ content, photoUrl, status }) => {
     return (
         <Container status={status}>
             <MessageBalloon>{content}</MessageBalloon>
