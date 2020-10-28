@@ -30,7 +30,9 @@ const MessageBalloon = styled.div`
 const ChatMessage = ({ content, photoUrl, status }) => {
     return (
         <Container status={status}>
-            <MessageBalloon>{content}</MessageBalloon>
+            <MessageBalloon>
+                <img src={content} alt={content}/>
+            </MessageBalloon>
             <Avatar src={photoUrl} alt={'photo'}/>
         </Container>
     );

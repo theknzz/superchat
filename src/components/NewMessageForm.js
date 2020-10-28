@@ -50,8 +50,8 @@ const NewMessageFrom = ({ send, isIn, marker }) => {
     const [input, setInput] = useState('');
     const auth = useFirebase().auth();
 
-    const handleSubmit = e => {
-        e.preventDefault();
+    const sendMessage = () => {
+        console.log(input)
         if (auth.currentUser) {
             send(input);
             setInput('');
@@ -59,18 +59,34 @@ const NewMessageFrom = ({ send, isIn, marker }) => {
         }
     }
 
+    const handleSubmit = e => {
+        e.preventDefault();
+        console.log(e.target)
+        sendMessage()
+    }
+
+    const handleImage = e => {
+        const url = URL.createObjectURL(e.target.files[0]);
+        send(url)
+        marker.current.scrollIntoView({ behavior: 'smooth'});
+    }
+
     return (
-        <Form onSubmit={handleSubmit} disabled={!isIn}>
-            <Input
-                type="text"
-                onChange={(e) => {
-                    setInput(e.target.value)
-                }}
-                value={input}
-                disabled={!isIn}
-            />
-            <Button disabled={!input}>➡</Button>
-        </Form>
+        <>
+            <Form onSubmit={handleSubmit} disabled={!isIn}>
+                <Input
+                    type="text"
+                    onChange={(e) => {
+                        console.log('input changed')
+                        setInput(e.target.value)
+                    }}
+                    value={input}
+                    disabled={!isIn}
+                />
+                <input type={'file'} accept="image/png, image/jpeg" onChange={handleImage} name={'file'} />
+                <Button disabled={!input}>➡</Button>
+            </Form>
+        </>
     );
 }
 
